@@ -12,4 +12,14 @@ public class LoginController {
 		model.addAttribute("role","Manage your contact details!!");
 		return "login";
 	}
+	
+	@GetMapping("/register")
+	public String register(Model model) {
+		model.addAttribute("FirstName", "David");
+		model.addAttribute("LastName","Henry");
+		model.addAttribute("ContactNo", "5765428236");
+		model.addAttribute("User","ADMIN");
+		
+		return "register";
+	}
 }
